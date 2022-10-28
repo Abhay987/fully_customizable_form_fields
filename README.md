@@ -1,9 +1,9 @@
 Language: [English](README.md)
 
-In this package , You can fully customize widgets/fields that related forms for eg.- buttons,input-fields,checkbox,radios,and chips and so on.
+In this package , You can fully customize widgets/fields which are used in form for eg.- buttons,input-fields,checkbox,radios,chips and so on.
 
-You can customize different types of checkboxes (Checkbox,CheckboxListTile) ,radio (Radio,RadioListTile) ,input-field's (textformfield,textfield) ,
-buttons (ElevatedButton,OutlinedButton,TextButton,GestureDetecture,DropDownButton) , chips, and switch's and so on.
+You can customize different types of checkboxes (Checkbox,CheckboxListTile) ,radio (Radio,RadioListTile) ,input-field (TextFormField,TextField) ,
+buttons (ElevatedButton,OutlinedButton,TextButton,GestureDetector,DropDownButton) , chips, and switch and so on.
 
 ## Get started
 
