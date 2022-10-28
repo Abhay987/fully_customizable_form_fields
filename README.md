@@ -60,11 +60,4 @@ class _ExampleState extends State<Example> {
 
 ```
 
-# [View more Examples](https://github.com/Abhay987/fully_customizable_form_fields.git/example)
-
-## Support
-
-If this plugin was useful to you, helped you to deliver your app, saved you a lot of time, or you just want to support the project, I would be very grateful if you buy me a cup of coffee.
-
-<a href="https://www.buymeacoffee.com/Abhay987" target="_blank"><img src="https://cdn.buymeacoffee.com/assets/img/home-page-v3/bmc-new-logo.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
+# [View more Examples](https://github.com/Abhay987/fully_customizable_form_fields/tree/master/example)
