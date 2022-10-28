@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ///Return TextFormField
 class TextFormFieldShow extends StatelessWidget {
-  final TextEditingController? textEditingController;
+  final TextEditingController? controller;
   final TextInputType? keyboardType;
   final TextCapitalization textCapitalization;
   final TextInputAction? inputAction;
@@ -35,19 +35,47 @@ class TextFormFieldShow extends StatelessWidget {
   final String Function(String?)? validator;
   final AutovalidateMode? autoValidateMode;
   final ScrollController? scrollController;
-  const TextFormFieldShow({Key? key,this.textEditingController,this.keyboardType = TextInputType.text,this.textCapitalization = TextCapitalization.none,
-    this.inputAction = TextInputAction.none,this.textDirection = TextDirection.ltr,this.textAlignment = TextAlign.start,
-    this.textAlignmentInVertical = TextAlignVertical.center,this.isAutoFocus = false,this.isReadOnly = false,this.isShowCursor=true,
-    this.obSecureCharacter = ".",this.obSecureText = false,this.autoCorrect = true,this.enableSuggestion = true,this.maxLines = 1,this.isExpand = false,
-    this.isEnabled = true,this.maxLength,this.cursorWidth = 2,this.cursorHeight,this.cursorColor,this.cursorRadius,this.keyboardAppearance,
-    this.scrollPadding = const EdgeInsets.all(20),this.mouseCursor,this.onChanged,this.onTap,this.onEditingComplete,this.onFieldSubmitted,this.onSaved,this.validator,this.scrollController,
+  const TextFormFieldShow({
+    Key? key,
+    this.controller,
+    this.keyboardType = TextInputType.text,
+    this.textCapitalization = TextCapitalization.none,
+    this.inputAction = TextInputAction.none,
+    this.textDirection = TextDirection.ltr,
+    this.textAlignment = TextAlign.start,
+    this.textAlignmentInVertical = TextAlignVertical.center,
+    this.isAutoFocus = false,
+    this.isReadOnly = false,
+    this.isShowCursor = true,
+    this.obSecureCharacter = ".",
+    this.obSecureText = false,
+    this.autoCorrect = true,
+    this.enableSuggestion = true,
+    this.maxLines = 1,
+    this.isExpand = false,
+    this.isEnabled = true,
+    this.maxLength,
+    this.cursorWidth = 2,
+    this.cursorHeight,
+    this.cursorColor,
+    this.cursorRadius,
+    this.keyboardAppearance,
+    this.scrollPadding = const EdgeInsets.all(20),
+    this.mouseCursor,
+    this.onChanged,
+    this.onTap,
+    this.onEditingComplete,
+    this.onFieldSubmitted,
+    this.onSaved,
+    this.validator,
+    this.scrollController,
     this.autoValidateMode,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: textEditingController ?? TextEditingController(),
+      controller: controller ?? TextEditingController(),
       keyboardType: keyboardType,
       textCapitalization: textCapitalization,
       textInputAction: inputAction,
@@ -69,22 +97,22 @@ class TextFormFieldShow extends StatelessWidget {
       cursorHeight: cursorHeight,
       cursorColor: cursorColor,
       cursorRadius: cursorRadius,
-      onSaved: onSaved ?? (value){},
-      validator: validator ?? (value){
-        if(value!.isEmpty)
-        {
-          return "* Required";
-        }
-        return null;
-      },
-      onEditingComplete: onEditingComplete ?? (){},
-      onFieldSubmitted: onFieldSubmitted ?? (value){},
-      onTap: onTap ?? (){},
+      onSaved: onSaved ?? (value) {},
+      validator: validator ??
+          (value) {
+            if (value!.isEmpty) {
+              return "* Required";
+            }
+            return null;
+          },
+      onEditingComplete: onEditingComplete ?? () {},
+      onFieldSubmitted: onFieldSubmitted ?? (value) {},
+      onTap: onTap ?? () {},
       onChanged: onChanged,
       mouseCursor: mouseCursor,
       scrollPadding: scrollPadding,
       keyboardAppearance: keyboardAppearance,
-      autovalidateMode: autoValidateMode??AutovalidateMode.disabled,
+      autovalidateMode: autoValidateMode ?? AutovalidateMode.disabled,
     );
   }
 }

@@ -10,15 +10,29 @@ class ElevatedButtonShow extends StatelessWidget {
   final Function(bool)? onHover;
   final Function(bool)? onFocusChange;
   final ButtonStyle? buttonStyle;
-  const ElevatedButtonShow({Key? key,this.child,this.onPressed,this.clipBehaviour= Clip.none,this.autoFocus = false,this.onLongPress,this.onHover,this.onFocusChange,this.buttonStyle}) : super(key: key);
+  const ElevatedButtonShow(
+      {Key? key,
+      this.child,
+      this.onPressed,
+      this.clipBehaviour = Clip.none,
+      this.autoFocus = false,
+      this.onLongPress,
+      this.onHover,
+      this.onFocusChange,
+      this.buttonStyle})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: ()=>onPressed,autofocus: autoFocus,
-      onLongPress: ()=>onLongPress,
+    return ElevatedButton(
+      onPressed: () => onPressed,
+      autofocus: autoFocus,
+      onLongPress: () => onLongPress,
       onHover: onHover,
       onFocusChange: onFocusChange,
       style: buttonStyle,
-      clipBehavior: clipBehaviour, child: child,);
+      clipBehavior: clipBehaviour,
+      child: child,
+    );
   }
 }

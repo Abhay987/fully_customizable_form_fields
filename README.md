@@ -1,39 +1,70 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+Language: [English](README.md)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+In this package , You can fully customize widgets/fields that related forms for eg.- buttons,input-fields,checkbox,radios,and chips and so on.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+You can customize different types of checkboxes (Checkbox,CheckboxListTile) ,radio (Radio,RadioListTile) ,input-field's (textformfield,textfield) ,
+buttons (ElevatedButton,OutlinedButton,TextButton,GestureDetecture,DropDownButton) , chips, and switch's and so on.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Get started
+
+
+### Add dependency
+
+```yaml
+dependencies:
+  fully_customizable_form_fields: ^0.0.1
+```
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Cross platform: mobile, desktop, browser
+- Simple, powerful, & Easy to use
+- **NO** native dependencies
+- Time Saving & improve productivity
+- You customize every field's that related forms.
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+### Usage
 
 ```dart
-const like = 'sample';
+
+import 'package:fully_customizable_form_fields/fully_customizable_form_fields.dart';
+
+class Example extends StatefulWidget {
+  const Example({Key? key}) : super(key: key);
+
+  @override
+  State<Example> createState() => _ExampleState();
+}
+
+class _ExampleState extends State<Example> {
+  final TextEditingController emailController = TextEditingController();
+  final GlobalKey<FormState> _formKey = GlobalKey();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Form(key: _formKey,child: Column(
+      children: [
+        TextFormFieldShow(controller: emailController,),
+        const SizedBox(height: 20,),
+        Row(
+          children: [
+            ElevatedButton(onPressed: (){}, child: const Text('Save')),
+            const SizedBox(width: 20,),
+            OutlinedButton(onPressed: (){}, child: const Text('Cancel')),
+          ],
+        ),
+      ],
+    ),),);
+  }
+}
+
 ```
 
-## Additional information
+# [View more Examples](https://github.com/Abhay987/fully_customizable_form_fields.git/example)
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## Support
+
+If this plugin was useful to you, helped you to deliver your app, saved you a lot of time, or you just want to support the project, I would be very grateful if you buy me a cup of coffee.
+
+<a href="https://www.buymeacoffee.com/Abhay987" target="_blank"><img src="https://cdn.buymeacoffee.com/assets/img/home-page-v3/bmc-new-logo.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+

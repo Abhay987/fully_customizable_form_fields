@@ -6,14 +6,16 @@ class GestureDetectorShow extends StatelessWidget {
   final Function? onTap;
   final Function? onDoubleTap;
   final Function? onLongPress;
-  const GestureDetectorShow({Key? key,this.child,this.onTap,this.onLongPress,this.onDoubleTap}) : super(key: key);
+  const GestureDetectorShow(
+      {Key? key, this.child, this.onTap, this.onLongPress, this.onDoubleTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>onTap,
-      onLongPress: ()=>onLongPress,
-      onDoubleTap: ()=>onDoubleTap,
+      onTap: () => onTap,
+      onLongPress: () => onLongPress,
+      onDoubleTap: () => onDoubleTap,
       child: child,
     );
   }

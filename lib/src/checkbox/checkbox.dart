@@ -17,14 +17,43 @@ class CheckBoxShow extends StatelessWidget {
   final OutlinedBorder? outlinedBorder;
   final BorderSide? borderSide;
   final bool triState;
-  const CheckBoxShow({Key? key,this.value,this.onChanged,this.mouseCursor,this.activeColor,this.autoFocus = false,this.focusColor,this.hoverColor,
-  this.checkColor,this.splashRadius,this.outlinedBorder,this.borderSide,this.focusNode,this.visualDensity,this.materialTapTargetSize,
-  this.triState = false}) : super(key: key);
+  const CheckBoxShow(
+      {Key? key,
+      this.value,
+      this.onChanged,
+      this.mouseCursor,
+      this.activeColor,
+      this.autoFocus = false,
+      this.focusColor,
+      this.hoverColor,
+      this.checkColor,
+      this.splashRadius,
+      this.outlinedBorder,
+      this.borderSide,
+      this.focusNode,
+      this.visualDensity,
+      this.materialTapTargetSize,
+      this.triState = false})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Checkbox(value: value, onChanged: onChanged,mouseCursor: mouseCursor,autofocus: autoFocus,activeColor: activeColor,
-    checkColor: checkColor,focusColor: focusColor,hoverColor: hoverColor,splashRadius: splashRadius,visualDensity: visualDensity,
-      materialTapTargetSize: materialTapTargetSize,focusNode: focusNode,shape: outlinedBorder,side: borderSide,tristate: triState,);
+    return Checkbox(
+      value: value,
+      onChanged: onChanged,
+      mouseCursor: mouseCursor,
+      autofocus: autoFocus,
+      activeColor: activeColor,
+      checkColor: checkColor,
+      focusColor: focusColor,
+      hoverColor: hoverColor,
+      splashRadius: splashRadius,
+      visualDensity: visualDensity,
+      materialTapTargetSize: materialTapTargetSize,
+      focusNode: focusNode,
+      shape: outlinedBorder,
+      side: borderSide,
+      tristate: triState,
+    );
   }
 }
