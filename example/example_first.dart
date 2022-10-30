@@ -18,7 +18,7 @@ class _ExampleState extends State<Example> {
         key: _formKey,
         child: Column(
           children: [
-            TextFormFieldShow(
+            TextFieldShow(
               controller: emailController,
             ),
             const SizedBox(
